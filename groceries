@@ -6,10 +6,95 @@ public class groceryList {
 		double totalPrice;
 		double totalTime;
 		
+		//all of the prices
+		
 		final double RICE_PRICE = 8.49;
 		final double BEANS_PRICE = 4.29;
+		final double DETER_PRICE = 11.99;
+		final double BREAD_PRICE = 2.49;
+		final double CEREAL_PRICE = 3.29;
+		final double MILK_PRICE = 3.49;
+		final double EGGS_PRICE = 2.89;
 		
-		final double RICE_TIME
+		//all of the times for entrance
+		
+		final double ENTRANCE_RICE = 1.25;
+		final double ENTRANCE_BEANS = 0.5;
+		final double ENTRANCE_DETER = 1;
+		final double ENTRANCE_BREAD = 1;
+		final double ENTRANCE_CEREAL = 0.5;
+		final double ENTRANCE_MILK = 1.5;
+		final double ENTRANCE_EGGS = 1.25;
+		
+		//all of the times for rice
+		
+		final double RICE_ENTRANCE = 1.25;
+		final double RICE_BEANS = 0.5;
+		final double RICE_DETER = 1;
+		final double RICE_BREAD = 1;
+		final double RICE_CEREAL = 0.5;
+		final double RICE_MILK = 1.5;
+		final double RICE_EGGS = 1.25;
+		
+		//all of the times for beans
+		
+		final double BEANS_ENTRANCE = 0.5;
+		final double BEANS_RICE = 0.5;
+		final double BEANS_DETER = 1;
+		final double BEANS_BREAD = 1;
+		final double BEANS_CEREAL = 1.5;
+		final double BEANS_MILK = 3;
+		final double BEANS_EGGS = 2.5;
+		
+		//all of the times for detergent
+		
+		final double DETER_ENTRANCE = 1;
+		final double DETER_RICE = 0.5;
+		final double DETER_BEANS = 1;
+		final double DETER_BREAD = 1.5;
+		final double DETER_CEREAL = 1;
+		final double DETER_MILK = 1.5;
+		final double DETER_EGGS = 2;
+		
+		//all of the times for bread
+		
+		final double BREAD_ENTRANCE = 1;
+		final double BREAD_RICE = 1.5;
+		final double BREAD_BEANS = 1; 
+		final double BREAD_DETER = 1.5;
+		final double BREAD_CEREAL = 0.75;
+		final double BREAD_MILK = 1.5;
+		final double BREAD_EGGS = 1;
+		
+		//all of the times for cereal
+		
+		final double CEREAL_ENTRANCE = 0.5;
+		final double CEREAL_RICE = 1;
+		final double CEREAL_BEANS = 1.5;
+		final double CEREAL_DETER = 1;
+		final double CEREAL_BREAD = 0.75;
+		final double CEREAL_MILK = 1.5;
+		final double CEREAL_EGGS = 2;
+		
+		//all of the times for milk
+		
+		final double MILK_ENTRANCE = 1.5;
+		final double MILK_RICE = 2.5;
+		final double MILK_BEANS = 3;
+		final double MILK_DETER = 1.5;
+		final double MILK_BREAD = 1.5;
+		final double MILK_CEREAL = 1.5;
+		final double MILK_EGGS = 0.5;
+		
+		//all of the times for eggs
+		
+		final double EGGS_ENTRANCE = 1.25;
+		final double EGGS_RICE = 3;
+		final double EGGS_BEANS = 2.5;
+		final double EGGS_DETER = 2;
+		final double EGGS_BREAD = 1;
+		final double EGGS_CEREAL = 2;
+		final double EGGS_MILK = 0.5;
 		
 		Scanner input = new Scanner(System.in);
 		
