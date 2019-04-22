@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class groceryList {
+
+	public static void main(String[] args) {
+		
+		double totalPrice;
+		double totalTime;
+		
+		final double RICE_PRICE = 8.49;
+		final double BEANS_PRICE = 4.29;
+		
+		final double RICE_TIME
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Welcome to the Grocery Store!\n");
+		
+		System.out.println("1. Rice");
+		System.out.println("2. Beans");
+		System.out.println("3. Detergent");
+		System.out.println("4. Bread");
+		System.out.println("5. Cereal");
+		System.out.println("6. Milk");
+		System.out.println("7. Eggs\n");
+		System.out.print("Enter item number from list above: ");
+		
+		int item = input.nextInt();
+		
+		System.out.print("Enter quantity: ");
+		int quantity = input.nextInt();
+		
+	}
+
+}
