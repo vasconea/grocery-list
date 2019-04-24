@@ -1,34 +1,83 @@
 import java.util.Scanner;
-public class groceryList {
+public class grocList {
 
 	public static void main(String[] args) {
-		
-		double totalPrice;
-		double totalTime;
+		//item prices
 		
 		final double RICE_PRICE = 8.49;
 		final double BEANS_PRICE = 4.29;
+		final double DETERGENT_PRICE = 11.99;
+		final double BREAD_PRICE = 2.49;
+		final double CEREAL_PRICE = 3.29;
+		final double MILK_PRICE = 3.49;
+		final double EGGS_PRICE = 2.89;
 		
-		final double RICE_TIME
-		
+		double subTotal = 0.0; 
+		double subTotal1 = 0.0;
+		final double TAX_RATE = 1.07;
+				
+		int item, quantity;
+		char answer;
+				
 		Scanner input = new Scanner(System.in);
-		
+				
 		System.out.println("Welcome to the Grocery Store!\n");
-		
-		System.out.println("1. Rice");
-		System.out.println("2. Beans");
-		System.out.println("3. Detergent");
-		System.out.println("4. Bread");
-		System.out.println("5. Cereal");
-		System.out.println("6. Milk");
-		System.out.println("7. Eggs\n");
-		System.out.print("Enter item number from list above: ");
-		
-		int item = input.nextInt();
-		
-		System.out.print("Enter quantity: ");
-		int quantity = input.nextInt();
-		
-	}
+				
+		System.out.print("What is your budget?: ");
+		double budget = input.nextInt();
+				
+		if(budget <= 2.89) {
+			System.out.println("Sorry, you don't have enough money to shop today.");
+			System.exit(1);
+		}
+				
+		System.out.printf("\n%-15s %-12s\n", "Item", "Price");
+		System.out.printf("%-15s %-12s\n", "----", "-----");
+		System.out.printf("%-15s %-12.2f\n", "(1) Rice", RICE_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(2) Beans", BEANS_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(3) Detergent", DETERGENT_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(4) Bread", BREAD_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(5) Cereal", CEREAL_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(6) Milk", MILK_PRICE);
+		System.out.printf("%-15s %-12.2f\n", "(7) Eggs", EGGS_PRICE);
+			
+		do {
+			
+			System.out.print("\nEnter item number from list above: ");
+			item = input.nextInt();
+			System.out.print("Enter quantity: ");
+			quantity = input.nextInt();
+			
+			switch (item) {
+				case 1: subTotal += RICE_PRICE * quantity; break;
+				case 2: subTotal += BEANS_PRICE * quantity; break;				
+				case 3: subTotal += DETERGENT_PRICE * quantity; break;
+				case 4: subTotal += BREAD_PRICE * quantity; break;
+				case 5: subTotal += CEREAL_PRICE * quantity; break;
+				case 6: subTotal += MILK_PRICE * quantity; break;
+				case 7: subTotal += EGGS_PRICE * quantity; break;
+				default: System.out.println("Invalid input");
+			}
+			
+			System.out.printf("\nYour subtotal before tax is: %.2f", subTotal);
+			System.out.print("\nWould you like to continue shopping? (Y/N): ");
+			answer = input.next().charAt(0);
+			
+			if((answer == 'Y' || answer == 'y') && budget > subTotal) {
+				continue;
+			} else if (answer == 'N' || answer == 'n'){
+				break;
+			} else {
+				System.out.println("Invalid input.");
+				System.exit(1);
+			} 
+		} while(budget > subTotal);
 
+		double total = subTotal * TAX_RATE;
+		
+		System.out.printf("\nYour subtotal is: %6.2f", subTotal);
+		System.out.printf("\nYour Total is: %9.2f", total);
+		System.out.println("\n-------------------------");
+		System.out.printf("Your change is: %8.2f", budget - total);
+	}
 }
